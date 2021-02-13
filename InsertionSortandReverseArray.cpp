@@ -1,7 +1,7 @@
 #include <iostream>
 
 using namespace std;
-void insertionSort(int arr[], int n);
+void insertionSort(int a[], int n);
 void reversearry(int a[], int n);
 void printarray(int a[], int n);
 int main() {
@@ -29,17 +29,17 @@ int main() {
   return 0;
 }
 
-void insertionSort(int arr[], int n) {
-  int i, key, j;
+void insertionSort(int a[], int n) {
+  int i, temp, j;
   for (i = 1; i < n; i++) {
-    key = arr[i];
+    temp = a[i];
     j = i - 1;
 
-    while (j >= 0 && arr[j] > key) {
-      arr[j + 1] = arr[j];
+    while (j >= 0 && a[j] > temp) {
+      a[j + 1] = a[j];
       j--;
     }
-    arr[j + 1] = key;
+    a[j + 1] = temp;
   }
 }
 void swap(int * x, int * y) {
